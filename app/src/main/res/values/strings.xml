@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">swagger translator</string>
+    <string name="translate_from">translate from</string>
+    <string name="translate_to">translate to</string>
+</resources>
