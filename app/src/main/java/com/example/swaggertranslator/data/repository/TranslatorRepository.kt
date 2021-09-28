@@ -9,7 +9,10 @@ import kotlinx.coroutines.flow.flow
 
 object TranslatorRepository {
 
-    var textToTranslate = ""
+    lateinit var textToTranslate : String
+    lateinit var languagesList: List<Language>
+    lateinit var sourceLanguageCode : String
+    lateinit var targetLanguageCode : String
 
 
     fun getLanguagesList(): Flow<Status<List<Language>>> {

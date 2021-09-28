@@ -29,9 +29,9 @@ object Client {
     fun translate(): Status<Translated> {
         val url = initUrl(Constants.Url.PATH_TRANSLATE)
         val formBody = FormBody.Builder()
-            .add(Constants.FormBody.QUERY, "book")
-            .add(Constants.FormBody.SOURCE_LANGUAGE, "en")
-            .add(Constants.FormBody.TARGET_LANGUAGE, "ar")
+            .add(Constants.FormBody.QUERY, TranslatorRepository.textToTranslate)
+            .add(Constants.FormBody.SOURCE_LANGUAGE, TranslatorRepository.sourceLanguageCode)
+            .add(Constants.FormBody.TARGET_LANGUAGE, TranslatorRepository.targetLanguageCode)
             .build()
         val request = Request.Builder().url(url).post(formBody).build()
         val response = client.newCall(request).execute()

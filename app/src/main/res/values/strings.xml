@@ -2,4 +2,6 @@
     <string name="app_name">swagger translator</string>
     <string name="translate_from">translate from</string>
     <string name="translate_to">translate to</string>
+    <string name="translate">translate</string>
+    <string name="enter_a_text_to_translate">enter a text to translate</string>
 </resources>
