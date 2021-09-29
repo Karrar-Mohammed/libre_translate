@@ -3,6 +3,7 @@ package com.example.swaggertranslator.data.network
 import com.example.swaggertranslator.data.Status
 import com.example.swaggertranslator.data.repository.TranslatorRepository
 import com.example.swaggertranslator.data.response.language.Language
+import com.example.swaggertranslator.data.response.language.LanguageList
 import com.example.swaggertranslator.data.response.translated.Translated
 import com.example.swaggertranslator.utils.Constants
 import com.google.gson.Gson
@@ -18,7 +19,7 @@ object Client {
         val response = client.newCall(request).execute()
         return if (response.isSuccessful) {
             val result =
-                Gson().fromJson(response.body?.string(), Array<Language>::class.java).toList()
+                Gson().fromJson(response.body?.string(), LanguageList::class.java)
             Status.Success(result)
 
         } else {
