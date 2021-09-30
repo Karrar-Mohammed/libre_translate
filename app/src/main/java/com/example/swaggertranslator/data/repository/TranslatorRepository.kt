@@ -9,11 +9,11 @@ import kotlinx.coroutines.flow.flow
 
 object TranslatorRepository {
 
-    lateinit var textToTranslate : String
+    lateinit var textToTranslate: String
     lateinit var translateFromLanguagesList: MutableList<Language>
     lateinit var translateToLanguageList: List<Language>
-    lateinit var sourceLanguageCode : String
-    lateinit var targetLanguageCode : String
+    lateinit var sourceLanguageCode: String
+    lateinit var targetLanguageCode: String
 
 
     fun getLanguagesList(): Flow<Status<List<Language>>> {

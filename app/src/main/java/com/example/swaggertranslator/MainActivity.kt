@@ -13,7 +13,6 @@ import com.example.swaggertranslator.data.response.language.Language
 import com.example.swaggertranslator.data.response.translated.Translated
 import com.example.swaggertranslator.databinding.ActivityMainBinding
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.launch
@@ -87,7 +86,6 @@ class MainActivity : AppCompatActivity() {
             flow.collect { collectLanguage(it) }
         }
     }
-
 
 
     private fun collectLanguage(status: Status<List<Language>>) {

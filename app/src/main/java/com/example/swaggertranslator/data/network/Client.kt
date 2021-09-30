@@ -7,7 +7,10 @@ import com.example.swaggertranslator.data.response.language.LanguageList
 import com.example.swaggertranslator.data.response.translated.Translated
 import com.example.swaggertranslator.utils.Constants
 import com.google.gson.Gson
-import okhttp3.*
+import okhttp3.FormBody
+import okhttp3.HttpUrl
+import okhttp3.OkHttpClient
+import okhttp3.Request
 
 object Client {
 
